@@ -37,7 +37,7 @@ public class SockServiceImpl implements SockService {
         decreaseSockQuantity(sockRequest);
     }
 
-    @Override
+
     public void decreaseSockQuantity(SockRequest sockRequest) {
         validateRequest(sockRequest);
         Sock sock = mapToSock(sockRequest);
@@ -70,7 +70,6 @@ public class SockServiceImpl implements SockService {
         return total;
     }
 
-    @Override
     public void validateRequest(SockRequest sockRequest) {
         if (sockRequest.getColor() == null && sockRequest.getSize() == null) {
             throw new InvalidSockException("Все поля должны быть заполнены");
@@ -83,7 +82,6 @@ public class SockServiceImpl implements SockService {
         }
     }
 
-    @Override
     public Sock mapToSock(SockRequest sockRequest) {
         Sock sock = new Sock(sockRequest.getColor(), sockRequest.getSize(), sockRequest.getCottonPercentage());
         return sock;

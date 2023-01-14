@@ -34,7 +34,7 @@ public class SockController {
         sockService.addSock(sockRequest);
     }
 
-    @PostMapping
+    @PutMapping
     public void issueSocks(@RequestBody SockRequest sockRequest) {
         sockService.issueSock(sockRequest);
     }
