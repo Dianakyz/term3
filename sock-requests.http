@@ -1,0 +1,42 @@
+###
+POST http://localhost:8080/api/sock
+Content-Type: application/json
+
+{
+  "color": "GREEN",
+  "size": "S",
+  "cottonPercentage": 50,
+  "quantity": 10
+}
+
+###
+POST http://localhost:8080/api/sock
+Content-Type: application/json
+
+{
+  "color": "BLUE",
+  "size": "M",
+  "cottonPercentage": 80,
+  "quantity": 20
+}
+
+###
+POST http://localhost:8080/api/sock
+Content-Type: application/json
+
+{
+  "color": "RED",
+  "size": "XL",
+  "cottonPercentage": 10,
+  "quantity": 25
+}
+
+
+###
+GET http://localhost:8080/api/sock
+
+###
+GET http://localhost:8080/api/sock?color=BLUE
+
+###
+GET http://localhost:8080/api/sock?cottonMin=60
